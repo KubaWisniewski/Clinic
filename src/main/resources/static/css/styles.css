@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+.offset{
+    margin-top: 78px;
+}
+
+.navbar {
+    padding: .6rem 1rem;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    background-color: rgba(57, 63, 70, .9)!important;
+}
+
+.navbar .nav-link {
+    color: white!important;
+}
+
+.navbar .nav-link:hover {
+    color: #827d6d!important;
+}
+
+.navbar-nav {
+    padding-right: .8rem;
+    font-size: large;
+}
+
+.navbar-brand {
+    font-size: 38px;
+}
+
+.home-inner {
+    background-image: url("https://images.pexels.com/photos/377058/pexels-photo-377058.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.caption {
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+}
+
+.caption h3 {
+    color: rgba(57, 63, 70, .9)!important;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    font-weight: 700;
+}
+
+.btn {
+    border-width: medium;
+    border-radius: 0;
+    padding: .5rem 1.1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-color: rgba(57, 63, 70, .9)!important;
+    color: rgba(57, 63, 70, .9)!important;
+
+}
+
+.btn:hover{
+    background-color: #827d6d;
+}
+
+.jumbotron{
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 3rem 3rem;
+}
+
+.super-jumbo{
+    background-color: rgba(57, 63, 70, .9)!important;
+}
+
+.super-jumbo-reverse{
+    background-color: cadetblue;
+}
+
+.narrow {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+h3.heading {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-align: center;
+    color: cadetblue;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+}
+
+.contact {
+    color: rgba(57, 63, 70, .9)!important;
+}
+
+.heading-underline {
+    width: 7rem;
+    height: .2rem;
+    background-color: #827d6d;
+    margin: 0 auto 2rem;
+}
+
+.fa-calendar-check {
+    color: #827d6d;
+    margin: 1rem auto;
+}
+
+.fa-file-prescription{
+    color: #827d6d;
+    margin: 1rem auto;
+}
+
+.fa-user-md {
+    color: #827d6d;
+    margin: 1rem auto;
+}
+
+.about h3{
+    font-size: 1.4rem;
+    color: cadetblue;
+    padding-bottom: .4rem;
+    opacity: 90%;
+    text-transform: uppercase;
+}
+
+.about p{
+    font-size: 1.1rem;
+    color: white;
+}
+
+#contact h3{
+    text-transform: uppercase;
+    color: rgba(57, 63, 70, .9)!important;
+}
+
+.padding {
+    padding: 2rem 0;
+}
+.no-padding [class*=col-] {
+    padding: 0;
+}
+img.example-image {
+    max-width: 100%;
+}
+.item img {
+    transition: transform .4s ease;
+}
+.item img:hover {
+    transform: scale(1.1);
+    cursor: zoom-in;
+}
+.item {
+    overflow: hidden;
+}
