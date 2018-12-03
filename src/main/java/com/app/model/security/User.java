@@ -5,13 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import org.apache.commons.lang3.builder.HashCodeExclude;
-import org.apache.commons.lang3.builder.ToStringExclude;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Indexed;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,7 +19,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @SuperBuilder
 @Entity
-@Indexed
 @Inheritance(strategy = InheritanceType.JOINED)
 @OnDelete(action = OnDeleteAction.CASCADE)
 @DynamicUpdate(value = true)
@@ -31,7 +26,6 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
-    @Field
     private String firstName;
     private String lastName;
     private String email;

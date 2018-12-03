@@ -49,7 +49,8 @@
                         <div class="media-body">
                             <h3 class="mt-2" th:text="${a.appointmentStartDate}"></h3>
                             <div class="mt-2">
-                                <form th:action="@{/patient/registerAppointment}" method="post" style="display: inline;">
+                                <form th:action="@{/patient/registerAppointment}" method="post"
+                                      style="display: inline;">
                                     <input type="text" name="id" th:value="${a.id}" hidden="hidden"
                                            readonly="readonly"/>
                                     <button class="btn btn-success btn-lg">Reserve</button>

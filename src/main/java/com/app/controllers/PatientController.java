@@ -1,7 +1,6 @@
 package com.app.controllers;
 
 import com.app.model.entities.Appointment;
-import com.app.model.entities.Doctor;
 import com.app.model.entities.Gender;
 import com.app.model.entities.Patient;
 import com.app.service.DoctorService;
@@ -76,8 +75,8 @@ public class PatientController {
     }
 
     @PostMapping("/registerAppointment")
-    public String registerAppointmentPost(@RequestParam Long id, @AuthenticationPrincipal UserDetails currentUser ) {
-        Appointment appointment=service.getAppointmentById(id);
+    public String registerAppointmentPost(@RequestParam Long id, @AuthenticationPrincipal UserDetails currentUser) {
+        Appointment appointment = service.getAppointmentById(id);
         Patient patient = (Patient) service.getPatientEmail(currentUser.getUsername());
         appointment.setPatient(patient);
         service.registerNewAppointment(appointment);

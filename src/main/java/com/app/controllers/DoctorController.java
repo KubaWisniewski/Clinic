@@ -3,18 +3,12 @@ package com.app.controllers;
 import com.app.model.entities.Appointment;
 import com.app.model.entities.Doctor;
 import com.app.model.entities.Gender;
-import com.app.model.entities.Patient;
-import com.app.repository.PatientRepository;
-
 import com.app.service.DoctorService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("doctor")

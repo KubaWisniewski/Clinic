@@ -3,7 +3,6 @@ package com.app.service;
 import com.app.exceptions.MyException;
 import com.app.model.entities.Appointment;
 import com.app.model.entities.AppointmentStatus;
-import com.app.model.entities.Doctor;
 import com.app.model.entities.Patient;
 import com.app.repository.AppointmentRepository;
 import com.app.repository.DoctorRepository;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,7 +20,6 @@ public class PatientService {
     private PatientRepository patientRepository;
     private AppointmentRepository appointmentRepository;
     private FileManager fileManager;
-    private DoctorRepository doctorRepository;
 
 
     public PatientService(PatientRepository patientRepository, AppointmentRepository appointmentRepository, FileManager fileManager) {

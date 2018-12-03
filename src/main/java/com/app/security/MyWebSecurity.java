@@ -13,7 +13,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,7 +44,7 @@ public class MyWebSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers("/patient/**").hasRole("PATIENT")
                 .antMatchers("/doctor/*").hasRole("DOCTOR")
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/", "/css/*","/img/*","/public/**","/delete", "/webjars/**", "/register", "/login*", "/signin/**", "/signup/**", "/registerConfirm").permitAll()
+                .antMatchers("/", "/css/*", "/img/*", "/public/**", "/delete", "/webjars/**", "/register", "/login*", "/signin/**", "/signup/**", "/registerConfirm").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

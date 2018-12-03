@@ -3,13 +3,9 @@ package com.app.controllers;
 import com.app.model.entities.Gender;
 import com.app.model.entities.Patient;
 import com.app.service.UserService;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.security.Principal;
 
 @Controller
 public class UserController {
@@ -34,9 +30,9 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public String login(Model model){
+    public String login(Model model) {
         model.addAttribute("error", "");
-        return  "security/loginForm";
+        return "security/loginForm";
     }
 
     @GetMapping("/login/error")

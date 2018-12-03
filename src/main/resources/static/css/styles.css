@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-.offset{
+.offset {
     margin-top: 78px;
 }
 
@@ -10,15 +10,15 @@
     font-size: .9rem;
     font-weight: 700;
     letter-spacing: .1rem;
-    background-color: rgba(57, 63, 70, .9)!important;
+    background-color: rgba(57, 63, 70, .9) !important;
 }
 
 .navbar .nav-link {
-    color: white!important;
+    color: white !important;
 }
 
 .navbar .nav-link:hover {
-    color: #827d6d!important;
+    color: #827d6d !important;
 }
 
 .navbar-nav {
@@ -43,7 +43,7 @@
 }
 
 .caption h3 {
-    color: rgba(57, 63, 70, .9)!important;
+    color: rgba(57, 63, 70, .9) !important;
     font-size: 2.4rem;
     text-transform: uppercase;
     padding-bottom: 2rem;
@@ -57,26 +57,26 @@
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
-    border-color: rgba(57, 63, 70, .9)!important;
-    color: rgba(57, 63, 70, .9)!important;
+    border-color: rgba(57, 63, 70, .9) !important;
+    color: rgba(57, 63, 70, .9) !important;
 
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #827d6d;
 }
 
-.jumbotron{
+.jumbotron {
     margin-bottom: 0;
     border-radius: 0;
     padding: 3rem 3rem;
 }
 
-.super-jumbo{
-    background-color: rgba(57, 63, 70, .9)!important;
+.super-jumbo {
+    background-color: rgba(57, 63, 70, .9) !important;
 }
 
-.super-jumbo-reverse{
+.super-jumbo-reverse {
     background-color: cadetblue;
 }
 
@@ -96,7 +96,7 @@ h3.heading {
 }
 
 .contact {
-    color: rgba(57, 63, 70, .9)!important;
+    color: rgba(57, 63, 70, .9) !important;
 }
 
 .heading-underline {
@@ -111,7 +111,7 @@ h3.heading {
     margin: 1rem auto;
 }
 
-.fa-file-prescription{
+.fa-file-prescription {
     color: #827d6d;
     margin: 1rem auto;
 }
@@ -121,7 +121,7 @@ h3.heading {
     margin: 1rem auto;
 }
 
-.about h3{
+.about h3 {
     font-size: 1.4rem;
     color: cadetblue;
     padding-bottom: .4rem;
@@ -129,32 +129,37 @@ h3.heading {
     text-transform: uppercase;
 }
 
-.about p{
+.about p {
     font-size: 1.1rem;
     color: white;
 }
 
-#contact h3{
+#contact h3 {
     text-transform: uppercase;
-    color: rgba(57, 63, 70, .9)!important;
+    color: rgba(57, 63, 70, .9) !important;
 }
 
 .padding {
     padding: 2rem 0;
 }
+
 .no-padding [class*=col-] {
     padding: 0;
 }
+
 img.example-image {
     max-width: 100%;
 }
+
 .item img {
     transition: transform .4s ease;
 }
+
 .item img:hover {
     transform: scale(1.1);
     cursor: zoom-in;
 }
+
 .item {
     overflow: hidden;
 }

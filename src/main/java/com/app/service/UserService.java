@@ -33,7 +33,8 @@ public class UserService {
         user.setPhoto(filename);
         patientRepository.save((Patient) user);
     }
-    public void registerDoctor(User user){
+
+    public void registerDoctor(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setEnabled(true);
         user.setRole(Role.DOCTOR);

@@ -36,7 +36,8 @@
         <div class="col-xl-8 offset-xl-2">
 
             <h1>Register new doctor</h1>
-            <form th:action="@{/admin/doctorRegister}" method="post" th:object="${doctor}" enctype="multipart/form-data">
+            <form th:action="@{/admin/doctorRegister}" method="post" th:object="${doctor}"
+                  enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input id="email" type="email" class="form-control" th:field="*{email}"/>
