@@ -1,17 +1,17 @@
 # Clinic
 Clinic Management System 
-#Technologies 
+# Technologies 
 Java 8, Spring boot, spring data, spring security, thymeleaf, bootstrap
 
-Admin
--Register doctor
+## Admin
+* Register doctor
 
-Doctor
--Check and edit personal information
--Change appointment status
--Search patient and check his appointment history
+## Doctor
+* Check and edit personal information
+* Change appointment status
+* Search patient and check his appointment history
 
-Patient
--Check and edit personal information
--Reserve appointment
--Check appointment history
+## Patient
+* Check and edit personal information
+* Reserve appointment
+* Check appointment history
