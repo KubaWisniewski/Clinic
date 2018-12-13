@@ -1,0 +1,11 @@
+Patient:
+First name: Jakub
+Last name: Wiśniewski
+------------------------------------------
+Medicine name: Appap
+Quantity: 1
+-------------------------------------------
+Doctor:
+First name: Jan
+Last name: Nowak
+Date: 2018-12-13

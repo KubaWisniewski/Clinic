@@ -27,6 +27,9 @@
                 <a class="nav-link" th:href="@{/doctor/addNewAppointment}">Add new appointments</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" th:href="@{/doctor/searchForm}">Search patient</a>
+            </li>
+            <li class="nav-item">
                 <span sec:authorize="isAuthenticated()" style="display: inline-block;">
                    <form th:action="@{/app-logout}" method="post">
                     <input class="btn btn-danger btn-lg " type="submit" value="Logout"/>

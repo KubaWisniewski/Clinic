@@ -25,4 +25,5 @@ public class Perscription {
     @JoinColumn(name = "patient_id")
     private Patient patient;
     private LocalDate date;
+    private String fileName;
 }

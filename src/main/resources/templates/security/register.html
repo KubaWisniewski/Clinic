@@ -19,9 +19,15 @@
                     <label for="email"><b>Email:</b></label>
                     <input id="email" type="email" class="form-control" th:field="*{email}" required/>
                 </div>
+                <div th:if="${errors.containsKey('email')}">
+                    <p class="text-danger" th:text="${errors.get('email')}"></p>
+                </div>
                 <div class="form-group">
                     <label for="password"><b>Password:</b></label>
                     <input id="password" type="password" class="form-control" th:field="*{password}" required/>
+                </div>
+                <div th:if="${errors.containsKey('password')}">
+                    <p class="text-danger" th:text="${errors.get('password')}"></p>
                 </div>
                 <div class="form-group">
                     <label for="passwordConfirmation"><b>Password confirmation:</b></label>
@@ -32,13 +38,22 @@
                     <label for="firstName"><b>First Name:</b></label>
                     <input id="firstName" type="text" class="form-control" th:field="*{firstName}" required/>
                 </div>
+                <div th:if="${errors.containsKey('firstName')}">
+                    <p class="text-danger" th:text="${errors.get('firstName')}"></p>
+                </div>
                 <div class="form-group">
                     <label for="lastName"><b>Last Name:</b></label>
                     <input id="lastName" type="text" class="form-control" th:field="*{lastName}" required/>
                 </div>
+                <div th:if="${errors.containsKey('lastName')}">
+                    <p class="text-danger" th:text="${errors.get('lastName')}"></p>
+                </div>
                 <div class="form-group">
                     <label for="phone"><b>Phone:</b></label>
                     <input id="phone" type="text" class="form-control" th:field="*{phone}" required/>
+                </div>
+                <div th:if="${errors.containsKey('phone')}">
+                    <p class="text-danger" th:text="${errors.get('phone')}"></p>
                 </div>
                 <div class="form-group">
                     <b><label for="gender"><b>Gender:</b></label></b></br>

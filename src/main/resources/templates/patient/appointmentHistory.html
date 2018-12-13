@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Doctors</title>
+    <title>History</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -44,21 +44,20 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-xl-8 offset-xl-2">
-            <ul class="list-unstyled">
-                <li th:each="p : ${doctors}" class="my-4">
-                    <div class="media">
-                        <img class="align-self-center mr-3" th:src="@{/img/{filename}(filename=${p.photo})}"
-                             th:alt="${p.firstName}"/>
-                        <div class="media-body">
-                            <h3 class="mt-0" th:text="${p.firstName}"></h3>
-                            <h3 class="mt-2" th:text="${p.lastName}"></h3>
-                            <h3 class="mt-2" th:text="${p.specialization}"></h3>
+        <ul class="list-unstyled">
+            <li th:each="a : ${appointments}" class="my-4">
+                <div class="media">
+                    <div class="media-body">
+                        <h3 class="mt-2" th:text="${a.appointmentStartDate}"></h3>
+                        <h3 class="mt-2" th:text="${a.appointmentStatus}"></h3>
+                        <div class="mt-2">
+                            <a class="btn btn-outline-success btn-md mr-2"
+                               th:href="@{/patient/appointmentDetails/{id}(id=${a.id})}">DETAILS</a>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

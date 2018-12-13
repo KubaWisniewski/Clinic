@@ -1,0 +1,11 @@
+Patient:
+First name: Jakub
+Last name: Wiśniewski
+------------------------------------------
+Medicine name: Imb
+Quantity: 3
+-------------------------------------------
+Doctor:
+First name: Jan
+Last name: Nowak
+Date: 2018-12-13

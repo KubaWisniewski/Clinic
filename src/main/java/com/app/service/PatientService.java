@@ -4,9 +4,10 @@ import com.app.exceptions.MyException;
 import com.app.model.entities.Appointment;
 import com.app.model.entities.AppointmentStatus;
 import com.app.model.entities.Patient;
+import com.app.model.entities.Perscription;
 import com.app.repository.AppointmentRepository;
-import com.app.repository.DoctorRepository;
 import com.app.repository.PatientRepository;
+import com.app.repository.PerscriptionRepository;
 import com.app.utils.FileManager;
 import org.springframework.stereotype.Service;
 
@@ -20,12 +21,13 @@ public class PatientService {
     private PatientRepository patientRepository;
     private AppointmentRepository appointmentRepository;
     private FileManager fileManager;
+    private PerscriptionRepository perscriptionRepository;
 
-
-    public PatientService(PatientRepository patientRepository, AppointmentRepository appointmentRepository, FileManager fileManager) {
+    public PatientService(PatientRepository patientRepository, AppointmentRepository appointmentRepository, FileManager fileManager, PerscriptionRepository perscriptionRepository) {
         this.patientRepository = patientRepository;
         this.appointmentRepository = appointmentRepository;
         this.fileManager = fileManager;
+        this.perscriptionRepository = perscriptionRepository;
     }
 
     public void updatePatient(Patient patient) {
@@ -85,7 +87,33 @@ public class PatientService {
             e.printStackTrace();
             throw new MyException("Service get appointmts exception", LocalDateTime.now());
         }
-
-
     }
+
+    public List<Appointment> getAppointmentsByPatientId(Long id) {
+        try {
+
+            return appointmentRepository.findByPatient_Id(id).stream().collect(Collectors.toList());
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new MyException("Service get appointmts exception", LocalDateTime.now());
+        }
+    }
+
+    public List<Perscription> getPatientPerscriptions(Long id) {
+        try {
+            return perscriptionRepository.getAllByPatient_Id(id).stream().collect(Collectors.toList());
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new MyException("Service get perscriptions by id exception", LocalDateTime.now());
+        }
+    }
+    public String getPerscriptionById(Long id) {
+        try {
+            return perscriptionRepository.getOne(id).getFileName();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new MyException("Service get perscription by id exception", LocalDateTime.now());
+        }
+    }
+
 }

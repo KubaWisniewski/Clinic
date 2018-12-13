@@ -21,6 +21,9 @@
                     <input id="password" type="password" class="form-control" name="password"/>
                 </div>
                 <div>
+                    <p class="text-danger" th:text="${error}"></p>
+                </div>
+                <div>
                     <button class="btn btn-success btn-lg" type="submit">LOGIN</button>
                     <button class="btn btn-danger btn-lg" type="reset">RESET</button>
                 </div>
