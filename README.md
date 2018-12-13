@@ -10,8 +10,10 @@ Java 8, Spring boot, spring data, spring security, thymeleaf, bootstrap
 * Check and edit personal information
 * Change appointment status
 * Search patient and check his appointment history
+* Add percriptions
 
 ## Patient
 * Check and edit personal information
 * Reserve appointment
 * Check appointment history
+* Check and download perscriptions
