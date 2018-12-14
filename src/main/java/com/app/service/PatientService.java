@@ -4,10 +4,10 @@ import com.app.exceptions.MyException;
 import com.app.model.entities.Appointment;
 import com.app.model.entities.AppointmentStatus;
 import com.app.model.entities.Patient;
-import com.app.model.entities.Perscription;
+import com.app.model.entities.Prescription;
 import com.app.repository.AppointmentRepository;
 import com.app.repository.PatientRepository;
-import com.app.repository.PerscriptionRepository;
+import com.app.repository.PrescriptionRepository;
 import com.app.utils.FileManager;
 import org.springframework.stereotype.Service;
 
@@ -21,13 +21,13 @@ public class PatientService {
     private PatientRepository patientRepository;
     private AppointmentRepository appointmentRepository;
     private FileManager fileManager;
-    private PerscriptionRepository perscriptionRepository;
+    private PrescriptionRepository prescriptionRepository;
 
-    public PatientService(PatientRepository patientRepository, AppointmentRepository appointmentRepository, FileManager fileManager, PerscriptionRepository perscriptionRepository) {
+    public PatientService(PatientRepository patientRepository, AppointmentRepository appointmentRepository, FileManager fileManager, PrescriptionRepository prescriptionRepository) {
         this.patientRepository = patientRepository;
         this.appointmentRepository = appointmentRepository;
         this.fileManager = fileManager;
-        this.perscriptionRepository = perscriptionRepository;
+        this.prescriptionRepository = prescriptionRepository;
     }
 
     public void updatePatient(Patient patient) {
@@ -99,20 +99,20 @@ public class PatientService {
         }
     }
 
-    public List<Perscription> getPatientPerscriptions(Long id) {
+    public List<Prescription> getPatientPrescriptions(Long id) {
         try {
-            return perscriptionRepository.getAllByPatient_Id(id).stream().collect(Collectors.toList());
+            return prescriptionRepository.getAllByPatient_Id(id).stream().collect(Collectors.toList());
         } catch (Exception e) {
             e.printStackTrace();
-            throw new MyException("Service get perscriptions by id exception", LocalDateTime.now());
+            throw new MyException("Service get prescriptions by id exception", LocalDateTime.now());
         }
     }
-    public String getPerscriptionById(Long id) {
+    public String getPrescriptionById(Long id) {
         try {
-            return perscriptionRepository.getOne(id).getFileName();
+            return prescriptionRepository.getOne(id).getFileName();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new MyException("Service get perscription by id exception", LocalDateTime.now());
+            throw new MyException("Service get prescription by id exception", LocalDateTime.now());
         }
     }
 

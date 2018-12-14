@@ -25,5 +25,5 @@ public class Patient extends User {
     @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "patient")
     @ToStringExclude
     @HashCodeExclude
-    private Set<Perscription> perscriptions = new HashSet<>();
+    private Set<Prescription> prescriptions = new HashSet<>();
 }

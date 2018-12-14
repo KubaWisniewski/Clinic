@@ -5,7 +5,7 @@ import com.app.model.entities.*;
 import com.app.repository.AppointmentRepository;
 import com.app.repository.DoctorRepository;
 import com.app.repository.PatientRepository;
-import com.app.repository.PerscriptionRepository;
+import com.app.repository.PrescriptionRepository;
 import com.app.utils.TxtManager;
 import org.springframework.stereotype.Service;
 
@@ -19,14 +19,14 @@ public class DoctorService {
     private AppointmentRepository appointmentRepository;
     private PatientRepository patientRepository;
     private TxtManager txtManager;
-    private PerscriptionRepository perscriptionRepository;
+    private PrescriptionRepository prescriptionRepository;
 
-    public DoctorService(DoctorRepository doctorRepository, AppointmentRepository appointmentRepository, PatientRepository patientRepository, TxtManager txtManager, PerscriptionRepository perscriptionRepository) {
+    public DoctorService(DoctorRepository doctorRepository, AppointmentRepository appointmentRepository, PatientRepository patientRepository, TxtManager txtManager, PrescriptionRepository prescriptionRepository) {
         this.doctorRepository = doctorRepository;
         this.appointmentRepository = appointmentRepository;
         this.patientRepository = patientRepository;
         this.txtManager = txtManager;
-        this.perscriptionRepository = perscriptionRepository;
+        this.prescriptionRepository = prescriptionRepository;
     }
 
     public void updateDoctor(Doctor doctor) {
@@ -150,14 +150,14 @@ public class DoctorService {
         }
     }
 
-    public void addPerscription(Perscription perscription, Doctor doctor){
+    public void addPrescription(Prescription prescription, Doctor doctor){
         try{
-            perscription.setFileName(txtManager.addFile(doctor,perscription));
-            perscriptionRepository.save(perscription);
+            prescription.setFileName(txtManager.addFile(doctor, prescription));
+            prescriptionRepository.save(prescription);
 
         }catch (Exception e){
             e.printStackTrace();
-            throw new MyException("Sevice add perscription exception", LocalDateTime.now());
+            throw new MyException("Sevice add prescription exception", LocalDateTime.now());
         }
     }
 }

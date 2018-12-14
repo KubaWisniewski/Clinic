@@ -40,49 +40,49 @@
                   enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input id="email" type="email" class="form-control" th:field="*{email}"/>
+                    <input id="email" type="email" class="form-control" th:field="*{email}" required/>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input id="password" type="password" class="form-control" th:field="*{password}"/>
+                    <input id="password" type="password" class="form-control" th:field="*{password}" required/>
                 </div>
                 <div class="form-group">
                     <label for="passwordConfirmation">Password confirmation:</label>
                     <input id="passwordConfirmation" type="password" class="form-control"
-                           th:field="*{passwordConfirmation}"/>
+                           th:field="*{passwordConfirmation}" required/>
                 </div>
 
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
-                    <input id="firstName" type="text" class="form-control" th:field="*{firstName}"/>
+                    <input id="firstName" type="text" class="form-control" th:field="*{firstName}" required/>
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
-                    <input id="lastName" type="text" class="form-control" th:field="*{lastName}"/>
+                    <input id="lastName" type="text" class="form-control" th:field="*{lastName}" required/>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input id="phone" type="text" class="form-control" th:field="*{phone}"/>
+                    <input id="phone" type="text" class="form-control" th:field="*{phone}" required/>
                 </div>
                 <div class="form-group">
                     <p><label for="gender">Gender:</label></p>
-                    <select id="gender" th:field="${doctor.gender}">
+                    <select id="gender" th:field="${doctor.gender}" required>
                         <option th:each="g : ${genders}" th:value="${g}" th:text="${g}"></option>
                     </select>
                 </div>
                 <div class="form-group">
                     <p><label for="specialization">Specialization::</label></p>
-                    <select id="specialization" th:field="${doctor.specialization}">
+                    <select id="specialization" th:field="${doctor.specialization}" required>
                         <option th:each="s : ${specializations}" th:value="${s}" th:text="${s}"></option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="date">Birthday date:</label>
-                    <input id="date" type="date" class="form-control" th:field="*{birthdayDate}">
+                    <input id="date" type="date" class="form-control" th:field="*{birthdayDate}" required>
                 </div>
                 <div class="form-group">
                     <label for="photo">Photo</label>
-                    <input id="photo" type="file" class="form-control" th:field="*{multipartFile}"/>
+                    <input id="photo" type="file" class="form-control" th:field="*{multipartFile}" required/>
                 </div>
 
                 <div>

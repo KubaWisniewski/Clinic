@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Builder
 @Entity
 @DynamicUpdate
-public class Perscription {
+public class Prescription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

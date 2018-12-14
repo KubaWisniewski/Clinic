@@ -127,23 +127,23 @@ public class DoctorController {
         service.updateAppointment(appointment);
         return "redirect:/doctor/panel";
     }
-    @GetMapping("/addPerscription/{id}")
-    public String addPerscription(@PathVariable Long id, Model model,@AuthenticationPrincipal UserDetails currentUser){
+    @GetMapping("/addPrescription/{id}")
+    public String addPrescription(@PathVariable Long id, Model model,@AuthenticationPrincipal UserDetails currentUser){
         Doctor doctor = service.getDoctorEmail(currentUser.getUsername());
         model.addAttribute("doctor",doctor);
         Patient patient=service.getPatientById(id);
-        Perscription perscription= new Perscription();
-        perscription.setPatient(patient);
-        model.addAttribute("perscription",perscription);
-        return "/doctor/addPerscription";
+        Prescription prescription = new Prescription();
+        prescription.setPatient(patient);
+        model.addAttribute("prescription", prescription);
+        return "/doctor/addPrescription";
     }
 
-    @PostMapping("/addPerscription")
-    public String addPerscriptionPost(@ModelAttribute Perscription perscription,@AuthenticationPrincipal UserDetails currentUser){
+    @PostMapping("/addPrescription")
+    public String addPrescriptionPost(@ModelAttribute Prescription prescription, @AuthenticationPrincipal UserDetails currentUser){
         Doctor doctor = service.getDoctorEmail(currentUser.getUsername());
-        perscription.setPatient(service.getPatientById(perscription.getPatient().getId()));
-        perscription.setDate(LocalDate.now());
-        service.addPerscription(perscription,doctor);
+        prescription.setPatient(service.getPatientById(prescription.getPatient().getId()));
+        prescription.setDate(LocalDate.now());
+        service.addPrescription(prescription,doctor);
         return "redirect:/doctor/panel";
     }
 }

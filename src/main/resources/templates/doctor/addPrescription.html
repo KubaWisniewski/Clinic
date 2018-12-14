@@ -42,8 +42,8 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-8 offset-xl-2">
-            <h1>Add perscription</h1>
-            <form th:action="@{/doctor/addPerscription}" method="post" th:object="${perscription}">
+            <h1>Add prescription</h1>
+            <form th:action="@{/doctor/addPrescription}" method="post" th:object="${prescription}">
                 <div class="form-group">
                     <label for="name">Medicine name: </label>
                     <input id="name" type="text" class="form-control" th:field="*{medicineName}"/>

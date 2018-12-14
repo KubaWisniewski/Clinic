@@ -30,7 +30,7 @@
                 <a class="nav-link" th:href="@{/patient/appointmentHistory}">History</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/patient/perscriptions}">Perscriptions</a>
+                <a class="nav-link" th:href="@{/patient/prescriptions}">Prescriptions</a>
             </li>
             <li class="nav-item">
                 <span sec:authorize="isAuthenticated()" style="display: inline-block;">
@@ -46,13 +46,13 @@
     <div class="row">
         <div class="col-xl-8 offset-xl-2">
             <ul class="list-unstyled">
-                <li th:each="p : ${perscriptions}" class="my-4">
+                <li th:each="p : ${prescriptions}" class="my-4">
                     <div class="media">
                         <div class="media-body">
                             <h3 class="mt-0" th:text="${p.date}"></h3>
                             <div class="mt-2">
                                 <a class="btn btn-outline-info btn-md mr-2"
-                                   th:href="@{/patient/downloadPerscription/{id}(id=${p.id})}">Download</a>
+                                   th:href="@{/patient/downloadPrescription/{id}(id=${p.id})}">Download</a>
                             </div>
                         </div>
                     </div>

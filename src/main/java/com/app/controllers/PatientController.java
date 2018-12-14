@@ -106,9 +106,9 @@ public class PatientController {
         return "patient/appointmentDetails";
     }
 
-    @GetMapping("/downloadPerscription/{id}")
-    public ResponseEntity<InputStreamResource> downloadPerscription(@PathVariable Long id) throws IOException {
-        String fileName = service.getPerscriptionById(id);
+    @GetMapping("/downloadPrescription/{id}")
+    public ResponseEntity<InputStreamResource> downloadPrescription(@PathVariable Long id) throws IOException {
+        String fileName = service.getPrescriptionById(id);
         File file = new File("D:/Programowanie/JAVA/workspace/Clinic/src/main/resources/static/txt/" + fileName);
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
 
@@ -119,12 +119,12 @@ public class PatientController {
                 .body(resource);
     }
 
-    @GetMapping("/perscriptions")
-    public String allPerscriptions(Model model, @AuthenticationPrincipal UserDetails currentUser) {
+    @GetMapping("/prescriptions")
+    public String allPrescriptions(Model model, @AuthenticationPrincipal UserDetails currentUser) {
         Patient patient = service.getPatientEmail(currentUser.getUsername());
         model.addAttribute("patient", patient);
-        model.addAttribute("perscriptions", service.getPatientPerscriptions(patient.getId()));
-        return "patient/perscriptions";
+        model.addAttribute("prescriptions", service.getPatientPrescriptions(patient.getId()));
+        return "patient/prescriptions";
     }
 
 }
