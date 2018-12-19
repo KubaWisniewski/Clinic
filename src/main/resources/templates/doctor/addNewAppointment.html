@@ -58,6 +58,32 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="jumbotron mr-2">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <h1>Add new appointments</h1>
+                <div class="form-group">
+                    <form th:action="@{/doctor/addNewAppointments}" method="post">
+                        <div class="form-group">
+                            <label for="date">Date:</label>
+                            <input id="date" type="date" class="form-control"
+                                   th:name="date">
+                            <div class="form-group">
+                                <label for="time">Time:</label>
+                                <select id="time" name="time">
+                                    <option th:value="15" th:text="15"></option>
+                                    <option th:value="30" th:text="30"></option>
+                                    <option th:name="60" th:text="60"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-lg" type="submit">Add appointments</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Prescription</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman';
+            font-weight: bolder;
+            font-size: 5em;
+        }
+
+        h3 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        hr {
+            width: 75%;
+            color: #000;
+            height: 3px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPxLFRLg9f8X0ZL2h2TPbfrXkoPasbTlcM1xpfyKptzPDYi65F"
+            alt="" height="200px" width="200px"></img>
+    <h1>Electronic clinic</h1>
+    <hr/>
+    <h3>Patient</h3>
+
+    <p>First name: <span th:text="${firstNamePatient}"></span>
+    </p>
+    <p>Last name: <span th:text="${lastNamePatient}"></span>
+    </p>
+    <hr/>
+
+    <h3>Description</h3>
+    <p th:text="${description}"></p>
+
+    <hr/>
+
+    <h3>Doctor</h3>
+    <p>First name: <span th:text="${firstNameDoctor}"></span></p>
+    <p>Last name: <span th:text="${lastNameDoctor}"></span></p>
+</div>
+
+</body>
+</html>

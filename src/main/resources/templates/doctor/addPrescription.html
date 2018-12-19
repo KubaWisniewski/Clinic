@@ -45,12 +45,8 @@
             <h1>Add prescription</h1>
             <form th:action="@{/doctor/addPrescription}" method="post" th:object="${prescription}">
                 <div class="form-group">
-                    <label for="name">Medicine name: </label>
-                    <input id="name" type="text" class="form-control" th:field="*{medicineName}"/>
-                </div>
-                <div class="form-group">
-                    <label for="quantity">Quantity: </label>
-                    <input id="quantity" type="number" class="form-control" th:field="*{quantity}"/>
+                    <label for="name">Description: </label>
+                    <input id="name" type="text" class="form-control" th:field="*{description}"/>
                 </div>
                 <input type="text" th:field="*{patient.id}" hidden="hidden" readonly="readonly"/>
                 <button class="btn btn-success btn-lg" type="submit">Add</button>

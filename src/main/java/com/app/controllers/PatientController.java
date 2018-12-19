@@ -109,7 +109,7 @@ public class PatientController {
     @GetMapping("/downloadPrescription/{id}")
     public ResponseEntity<InputStreamResource> downloadPrescription(@PathVariable Long id) throws IOException {
         String fileName = service.getPrescriptionById(id);
-        File file = new File("D:/Programowanie/JAVA/workspace/Clinic/src/main/resources/static/txt/" + fileName);
+        File file = new File("D:/Programowanie/JAVA/workspace/Clinic/src/main/resources/static/pdf/" + fileName);
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
 
         return ResponseEntity.ok()

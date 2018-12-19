@@ -19,8 +19,7 @@ public class Prescription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String medicineName;
-    private Integer quantity;
+    private String description;
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "patient_id")
     private Patient patient;

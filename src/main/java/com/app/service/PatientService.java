@@ -107,6 +107,7 @@ public class PatientService {
             throw new MyException("Service get prescriptions by id exception", LocalDateTime.now());
         }
     }
+
     public String getPrescriptionById(Long id) {
         try {
             return prescriptionRepository.getOne(id).getFileName();
@@ -115,5 +116,4 @@ public class PatientService {
             throw new MyException("Service get prescription by id exception", LocalDateTime.now());
         }
     }
-
 }

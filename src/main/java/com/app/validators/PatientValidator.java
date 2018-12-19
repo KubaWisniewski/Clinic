@@ -44,7 +44,7 @@ public class PatientValidator implements Validator {
             if (!patient.getLastName().matches("[A-Z][a-zA-Z]*")) {
                 errors.rejectValue("lastName", "PATIENT LAST NAME IS NOT CORRECT");
             }
-            if (!patient.getPhone().matches("\\\\+\\\\d{2}(\\\\s\\\\d{3}){3}")) {
+            if (!patient.getPhone().matches("\\+\\d{2}(\\s\\d{3}){3}")) {
                 errors.rejectValue("phone", "PATIENT PHONE IS NOT CORRECT");
             }
             if (!EmailValidator.getInstance().isValid(patient.getEmail())) {
